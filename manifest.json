@@ -1,0 +1,26 @@
+{
+  "id": "LETS_GO_CATCH_THROW",
+  "name": "Let's Go Catch & Throw",
+  "version": "0.2.1",
+  "github": "ScottExplores/gen1recomp-lets-go-catch-throw",
+  "api": 2,
+  "entry": "main.lua",
+  "profile": "content",
+  "category": "GAMEPLAY",
+  "game_version": "0.0.0-dev || >=0.1.75 <2.0.0",
+  "priority": 950,
+  "dependencies": [],
+  "optional_dependencies": [
+    "DRAMALESS_SHAPE",
+    "ds_fp_ceiling",
+    "overworld_wild_spawns",
+    "DRAMATIC_SKY_RIDE"
+  ],
+  "conflicts": [],
+  "incompatible": [],
+  "games": ["red", "blue", "yellow"],
+  "experimental": false,
+  "permissions": ["engine_internals"],
+  "affects_link": false,
+  "description": "Interactive Let's Go-style wild-battle catching plus R2/L2 overworld throws for Dramaless, Kanto First Person, and optional Wilds integration."
+}
