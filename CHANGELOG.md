@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2 — 2026-08-14
+
+- Restored controller rumble on Gen1Recomp 0.1.88 by routing haptics through
+  the engine's supported touch-control seam instead of the newly sandboxed
+  `love.system` API.
+- Added a regression fixture that treats direct `love.system` access as a
+  hard error, matching the updated engine.
+
 ## 0.2.1 — 2026-08-13
 
 - Added the public GitHub repository metadata used by Gen1Recomp's built-in

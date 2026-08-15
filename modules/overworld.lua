@@ -32,7 +32,19 @@ local ARC_FACTOR = { low = 0.14, normal = 0.23, high = 0.34 }
 local SNAP = { off = 0, near = 0.16, normal = 0.34, strong = 0.64 }
 local ASSIST = { off = 0, low = 0.08, normal = 0.18, high = 0.34 }
 local TRAIL_LIMIT = { off = 0, short = 5, normal = 10, long = 18 }
-local RUMBLE_TIME = { off = 0, low = 0.035, normal = 0.07, high = 0.12 }
+local RUMBLE_LEVEL = {
+  off = "off", low = "light", normal = "normal", high = "strong",
+}
+
+-- Gen1Recomp 0.1.88 sandboxes love.system.  TouchControls is the engine's
+-- supported haptics owner and keeps the actual LÖVE call outside mod code.
+local Haptics
+do
+  local ok, module = pcall(require, "src.core.TouchControls")
+  if ok and type(module) == "table" and type(module.buzz) == "function" then
+    Haptics = module
+  end
+end
 
 local function pack(...)
   return { n = select("#", ...), ... }
@@ -127,11 +139,9 @@ return function(mod, shared)
   end
 
   local function rumble()
-    local duration = RUMBLE_TIME[tostring(setting("rumble", "low"))] or 0
-    if duration <= 0 then return end
-    if love and love.system and type(love.system.vibrate) == "function" then
-      pcall(love.system.vibrate, duration)
-    end
+    local level = RUMBLE_LEVEL[tostring(setting("rumble", "low"))] or "off"
+    if level == "off" or not Haptics then return end
+    pcall(Haptics.buzz, level)
   end
 
   local function isSelectHeld(game, joystick)

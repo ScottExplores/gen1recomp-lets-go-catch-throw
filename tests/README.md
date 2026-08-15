@@ -33,8 +33,9 @@ The pre-package verification run covers:
 - R2/L2 button fallback plus Thor analog-trigger axes, quick/two-press modes,
   scoped ownership, Select wheel access, and cleanup;
 - trajectory/target/HUD/selector/impact rendering and graphics restoration;
-- complete API-2 loading on Gen1Recomp 0.1.75 and 0.1.80.
+- complete API-2 loading on Gen1Recomp 0.1.75 and 0.1.88, including the
+  sandboxed haptics path introduced in 0.1.88.
 
-The final focused run passes **556 checks** under both standard Lua and
+The final focused run passes **557 checks** under both standard Lua and
 LuaJIT, plus 35 real-engine Bag/Battle checks and 15 production-loader checks
 on each tested Gen1Recomp version.

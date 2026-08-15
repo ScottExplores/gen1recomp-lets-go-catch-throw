@@ -1,7 +1,7 @@
 {
   "id": "LETS_GO_CATCH_THROW",
   "name": "Let's Go Catch & Throw",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "github": "ScottExplores/gen1recomp-lets-go-catch-throw",
   "api": 2,
   "entry": "main.lua",
