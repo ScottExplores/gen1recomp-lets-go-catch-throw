@@ -2,12 +2,12 @@
 
 ## Install the ZIP
 
-1. Transfer `LETS_GO_CATCH_THROW-0.2.1.zip` to the Thor's Downloads folder.
+1. Transfer `LETS_GO_CATCH_THROW-0.2.2.zip` to the Thor's Downloads folder.
 2. Launch Gen1Recomp.
 3. Open the launcher **MODS** tab.
 4. Tap **Import mod .zip** and choose the downloaded ZIP with Android's file
    picker.
-5. Confirm **Let's Go Catch & Throw 0.2.1** appears and is enabled.
+5. Confirm **Let's Go Catch & Throw 0.2.2** appears and is enabled.
 6. Keep Dramaless Shape 1.6.4 and Kanto in First Person 1.60.0 enabled.
 7. Relaunch if Gen1Recomp requests it.
 

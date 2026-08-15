@@ -5,14 +5,14 @@ catching and manual overworld Poké Ball throws. It is designed to coexist with
 Dramaless Shape and Kanto in First Person; it does not depend on, replace, or
 impersonate Dramatic Shape.
 
-Version 0.2.1 is an early public beta for Pokémon Red, Blue, and Yellow. It has
-been loader-tested against Gen1Recomp 0.1.75 and 0.1.80. The first physical AYN
+Version 0.2.2 is an early public beta for Pokémon Red, Blue, and Yellow. It has
+been loader-tested against Gen1Recomp 0.1.75 and 0.1.88. The first physical AYN
 Thor playtest is still recommended before treating the controller/rendering
 tuning as final.
 
 ## Install
 
-1. Copy `LETS_GO_CATCH_THROW-0.2.1.zip` to the Android device.
+1. Copy `LETS_GO_CATCH_THROW-0.2.2.zip` to the Android device.
 2. Open the Gen1Recomp launcher and select **MODS**.
 3. Select **Import mod .zip**, choose the ZIP, and enable **Let's Go Catch &
    Throw**.
@@ -20,7 +20,7 @@ tuning as final.
 5. In game, open **START → OPTIONS → CATCH & THROW**.
 
 The ZIP is ready to import as-is. Do not unzip it into another wrapper folder.
-Version 0.2.1 also enables Gen1Recomp's GitHub release update checks for future
+Version 0.2.2 also enables Gen1Recomp's GitHub release update checks for future
 releases from `ScottExplores/gen1recomp-lets-go-catch-throw`.
 
 ## AYN Thor quick start

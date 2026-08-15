@@ -100,10 +100,17 @@ end
 package.preload["src.core.Sound"] = function()
   return { play = function() end }
 end
+local buzzes = {}
+package.preload["src.core.TouchControls"] = function()
+  return { buzz = function(level) buzzes[#buzzes + 1] = level return true end }
+end
 
-love = {
-  system = { vibrate = function() end },
-}
+-- Match Gen1Recomp 0.1.88: touching love.system is a hard sandbox error.
+love = setmetatable({}, {
+  __index = function(_, key)
+    if key == "system" then error("love.system is not available to mods") end
+  end,
+})
 
 local hookWrapper, hookStops = nil, 0
 local skyRideFlying = false
@@ -524,6 +531,8 @@ check("Wilds hit queues exact pending capture",
     and shared.state.pendingCapture.target == exactTarget
     and shared.state.pendingCapture.ballId == "POKE_BALL"
     and shared.state.pendingCapture.consumed == true)
+check("impact rumble uses engine haptics seam", #buzzes > 0
+  and buzzes[#buzzes] == "light")
 finishSession()
 targetList = {}
 
